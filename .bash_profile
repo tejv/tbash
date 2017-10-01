@@ -40,6 +40,8 @@ alias path='echo -e ${PATH//:/\\n}'
 alias f='find . -name $1'
 alias eb='vim ~/.bash_profile'
 alias sb='source ~/.bash_profile'
+alias ur='sh ~/tbash/updt_repos.sh'
+
 
 
 
