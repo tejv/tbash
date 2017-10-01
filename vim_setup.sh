@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Are you sure curl, git, vim and spf-13 are installed(y/n):"
+echo "Are you sure curl, git, vim, ctags, cscope and spf-13 are installed(y/n):"
 read input
 if [ $input == "y" ]; then
     set -x
@@ -15,5 +15,7 @@ if [ $input == "y" ]; then
     set +x
     echo "Vim setup complete"
 else
+    echo "spf13 cmd"
+    echo "curl http://j.mp/spf13-vim3 -L -o - | sh"
     echo "Please install dependencies first"
 fi
