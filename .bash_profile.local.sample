@@ -1,0 +1,31 @@
+[[ ":$PATH:" != *":/usr/cisco/bin:"* ]] && PATH="/usr/cisco/bin:${PATH}"
+[[ ":$PATH:" != *":/router/bin:"* ]] && PATH="/router/bin:${PATH}"
+
+color=$(tput setaf 2)
+reset=$(tput sgr0)
+export PS1='\[$color\]ads\w\$\[$reset\] '
+
+alias ads='ssh bgl-ads-3511'
+
+# Frequent paths
+export COREDUMP='/nobackup/tsheoran/dev/core_dump/'
+export TDEVP='/nobackup/tsheoran/dev/'
+export TFTPP='tftp://202.153.144.25/auto/tftp-blr-users4/tsheoran/'
+export TFTPRP='/auto/tftp-rtp-viking/release/'
+export ITFTP='tftp://202.153.144.25/auto/tftp-blr-users4/tsheoran/asr9k-mini-x64.iso'
+export INAME='asr9k-mini-x64.iso'
+export TBUILDC='jam -l -d0 -j64 asr9k-mini-x64.iso'
+export TPULLC='acme nw -lineup xr-dev.lu -plat asr9k-px'
+alias teju='cd ~/teju/; ls '
+alias tdev='cd /nobackup/tsheoran/dev/; ls'
+alias tbash='cd ~/teju/bash/; ls'
+alias tftp='cd /auto/tftp-blr-users4/tsheoran/; ls'
+alias tftpr='cd /auto/tftp-rtp-viking/release/; ls'
+alias tbuild='sh ~/tbash/build_n_load_tftp_asr9k_prod.sh $1'
+alias tpull='sh ~/tbash/pull_new_asr9k.sh $1 $2'
+alias tpnb='sh ~/tbash/pull_n_build_asr9k.sh $1 $2'
+alias tcpr='sh ~/tbash/release_to_tftp.sh'
+alias tcp='sh ~/tbash/copy_to_tftp.sh $1'
+alias tacme='sh ~/tbash/acme_cmds.sh'
+
+
