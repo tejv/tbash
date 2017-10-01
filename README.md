@@ -1,0 +1,2 @@
+# tbash
+bash settings
