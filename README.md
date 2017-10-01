@@ -1,6 +1,7 @@
 # tbash
 bash settings
-pull this repo in home directory first
+pull this repo in home directory first. Then run bash_setup.sh. Then subsequent steps are not needed.
+
 1. remove ~/.bash_profile
 2. pull tbash repo in ~
 3. symlink ~/tbash/.bash_profile to ~/.bash_profile
