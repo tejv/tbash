@@ -34,4 +34,6 @@ echo "Acme commands
     /auto/ses/bin/run_sa
 @ See diff
     acme diff
+@ Revert a file
+  acme revert /path/to/file
 "
