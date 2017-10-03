@@ -30,4 +30,8 @@ echo "Acme commands
     acme diff -from_ver main/128 -to_ver main/129 > /nobackup/tsheoran/diff
     acme patch -reverse -i /nobackup/tsheoran/diff
     acme patch -i /path/to/diff
+@ static analysis - run at workspace root
+    /auto/ses/bin/run_sa
+@ See diff
+    acme diff
 "

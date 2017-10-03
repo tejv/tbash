@@ -3,8 +3,8 @@
 # Any local settings can be placed  in ~/.bash_profile.local
 
 # Source local file if it exists
-local=~/.bash_profile.local
-if [ -f $local ]; then
+localfile=~/.bash_profile.local
+if [ -f $localfile ]; then
     echo "Sourcing local bash profile"
     source ~/.bash_profile.local
 else
