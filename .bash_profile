@@ -11,6 +11,9 @@ else
     echo "No local bash profile found"
 fi
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Bash settings
 alias h='history | grep -i $1'
 alias +='pushd .'
