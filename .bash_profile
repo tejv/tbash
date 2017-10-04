@@ -39,7 +39,7 @@ alias gc='git commit -m "$1"'
 alias gac='git add . ; git commit -m "$1"'
 alias gpull='git pull origin master'
 alias gpush='git push origin master'
-"Make settings for frequent paths
+# TODO Make settings for frequent paths
 
 #Typos
 alias vi='vim'
