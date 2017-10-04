@@ -54,5 +54,8 @@ alias sb='source ~/.bash_profile'
 alias ur='sh ~/tbash/updt_repos.sh'
 alias texec='sh ~/tbash/texec.sh $1'
 
+alias sp='sh ~/tbash/save_path.sh'
+alias rp='sh ~/tbash/retrieve_path.sh'
+
 
 
