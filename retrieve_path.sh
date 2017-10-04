@@ -16,7 +16,13 @@ if [ -z "$1" ]; then
         let "LINE_NO++"
     done <$SAVE_FILE
 else
-    sed "$1q;d" $SAVE_FILE
+    SEL_PATH=$(sed "$1q;d" $SAVE_FILE)
+    if [ -d $SEL_PATH ]; then
+        echo $SEL_PATH
+        #ls
+    else
+        echo $SEL_PATH
+    fi
 fi
 #set +x
 
