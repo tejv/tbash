@@ -58,6 +58,7 @@ alias texec='sh ~/tbash/texec.sh $1'
 
 alias sp='sh ~/tbash/save_path.sh'
 alias rp='sh ~/tbash/retrieve_path.sh'
+alias fp='sh ~/tbash/find_path.sh'
 alias gp='cd $( fc -s ) ; ls '
 
 
