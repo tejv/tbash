@@ -10,7 +10,9 @@ cp -R /nobackup/tsheoran/dev/"$1"/ctrace_dec/  $NEW_DIR/
 acme diff > $NEW_DIR/diff
 /auto/ses/bin/run_sa > $NEW_DIR/sa
 ctags -R * >& /dev/null
+cscope -Rbq
 cd calvados/
 ctags -R * >& /dev/null
+cscope -Rbq
 set +x
 echo "Build post process over"
