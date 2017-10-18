@@ -12,3 +12,9 @@ cd ~/tbash/
 git pull origin master
 set +x
 
+echo "Updating tpython repo from origin master"
+set -x
+cd ~/tpython/
+git pull origin master
+set +x
+
