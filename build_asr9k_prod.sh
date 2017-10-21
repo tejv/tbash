@@ -7,5 +7,5 @@ jam -l -d0 -j64 asr9k-mini-x64.iso
 set +x
 echo "Build over"
 
-sh ~/teju/bash/build_post_process.sh $1
+sh ~/tbash/build_post_process.sh $1
 
