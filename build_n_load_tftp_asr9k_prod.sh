@@ -8,4 +8,4 @@ cp /nobackup/tsheoran/dev/"$1"/img-asr9k/asr9k-mini-x64.iso /auto/tftp-blr-users
 set +x
 echo "Build and load over"
 
-sh ~/teju/bash/build_post_process.sh $1
+sh ~/tbash/build_post_process.sh $1
