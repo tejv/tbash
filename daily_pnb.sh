@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ~/.bash_profile
 echo "Daily run"
 set -x
 sh ~/tbash/pull_n_build_asr9k.sh $(date -d "today" +"%d%m%Y")_ws
