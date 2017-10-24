@@ -10,7 +10,7 @@ if [ "$userinput" == "y" ]; then
   rm -rf $TMP_DIR
   set +x
   echo "WS Cleanup over"
-  exit(0)
+  exit 0
 fi
 
 echo "Cancelling operation"
