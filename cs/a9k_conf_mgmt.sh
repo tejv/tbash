@@ -5,7 +5,7 @@
 
 echo "Mgmt config started"
 set -x
-/router/bin/python ~/tpython/clear_line.py "$@"
-/router/bin/python ~/tpython/conf_mgmt_asr9k.py "$@"
+/router/bin/python ~/tpython/cs/a9k_clear_line.py "$@"
+/router/bin/python ~/tpython/cs/a9k_conf_mgmt.py "$@"
 set +x
 echo "Mgmt config over"
