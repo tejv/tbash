@@ -6,9 +6,9 @@ set -x
 
 WS_NAME=""
 if [ -z "$1" ]; then
-    let WS_NAME=$(date -d "today" +"%d%m%Y")_ws
+    WS_NAME=$(date -d "today" +"%d%m%Y")_ws
 else
-    let WS_NAME=$1
+    WS_NAME=$1
 fi
 
 /router/bin/python ~/tpython/cs/a9k_pull.py -w $WS_NAME
