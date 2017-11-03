@@ -3,7 +3,14 @@
 source ~/.bash_profile
 echo "Daily run"
 set -x
-WS_NAME=$(date -d "today" +"%d%m%Y")_ws
+
+WS_NAME=""
+if [ -z "$1" ]; then
+    let WS_NAME=$(date -d "today" +"%d%m%Y")_ws
+else
+    let WS_NAME=$1
+fi
+
 /router/bin/python ~/tpython/cs/a9k_pull.py -w $WS_NAME
 /router/bin/python ~/tpython/cs/a9k_build.py -w $WS_NAME
 /router/bin/python ~/tpython/cs/a9k_ctftp.py -w $WS_NAME
