@@ -1,0 +1,41 @@
+#!/pkg/bin/ksh
+# Script to check md5sum
+# exresult=$(.  /pkg/bin/untar_md5sum.py  $extractpath | grep "Verify result:" | cut -d' ' -f3)
+
+
+verify_md5sum () {
+    if [[ -f $1 ]]; then
+        if [[ "$1" != *.md5sum ]]; then
+            # echo "Cur File: $1"
+            calc_md5path=$1.calc_md5sum
+            actual_md5path=$1.md5sum
+            if [[ -f $actual_md5path ]]; then
+                md5sum $1 | cut -d' ' -f1 > $calc_md5path
+                # cat $actual_md5path
+                # cat $calc_md5path
+                cmp -s $actual_md5path $calc_md5path > /dev/null
+                cmp_result=$?
+                rm $calc_md5path
+                if [ "$cmp_result" != "0" ]; then
+                    echo "Error: $1 md5sum mismatch"
+                    exit 1
+                fi
+            else
+                echo "Error: $actual_md5path missing"
+                exit 2
+            fi
+        fi
+    else
+        files=$1/*
+        for f in $files
+        do
+            verify_md5sum $f
+        done
+    fi
+}
+
+echo "Input dir: $1"
+verify_md5sum $1
+
+
+
