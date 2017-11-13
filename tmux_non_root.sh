@@ -7,7 +7,7 @@
 # exit on error
 set -e
 
-TMUX_VERSION=2.3
+TMUX_VERSION=2.6
 INSTALL_DIR=$HOME
 
 # create our directories
