@@ -11,14 +11,10 @@ else
     WS_NAME=$1
 fi
 
-# /router/bin/python ~/tpython/cs/a9k_pull.py -w $WS_NAME
-# /router/bin/python ~/tpython/cs/a9k_build.py -w $WS_NAME
-# /router/bin/python ~/tpython/cs/a9k_ctftp.py -w $WS_NAME
-# /router/bin/python ~/tpython/cs/a9k_post_build.py -w $WS_NAME -f
-# /router/bin/python ~/tpython/cs/a9k_clear_line.py
-# /router/bin/python ~/tpython/cs/a9k_boot.py
-# /router/bin/python ~/tpython/cs/a9k_conf_mgmt.py
+# ~/py3runtime/bin/python3 ~/tpython/cs/a9k_cruiser.py -pbcdlm -ws $WS_NAME -lu r64x -dev samurai_1 -fboot samurai_2
+# ~/py3runtime/bin/python3 ~/tpython/cs/a9k_issu.py -eaxd -dev samurai_1 -v1 6.4.1.27I -v2 6.4.1.26I
+# ~/py3runtime/bin/python3 ~/tpython/cs/a9k_cruiser.py -pbcdlm -ws $WS_NAME -lu r62x -dev nirmith_1 -img cxr -scr migrate_to_eXR.yaml
+# sh ~/tbash/cs/a9k_script.sh $WS_NAME
 
-/router/bin/python ~/tpython/cs/a9k_cruiser.py -pbcedlm -ws $WS_NAME -img cxr -dev nirmith_1
 set +x
 echo "Daily run over"
