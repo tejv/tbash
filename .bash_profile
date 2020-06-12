@@ -14,7 +14,7 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export PS1="\e[0;33m[\u@\h \W]\$ \e[m "
+export PS1="\e[0;33m[\u@\h \w]\$ \e[m "
 
 # Bash settings
 alias h='history | grep -i $1'
